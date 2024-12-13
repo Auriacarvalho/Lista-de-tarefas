@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To Do List</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>To Do List</h1>
+    <form id="task-form">
+      <input type="text" id="task-input" placeholder="Add a new task..." required>
+      <button type="submit">Add</button>
+    </form>
+  
+    <!-- Barra de pesquisa -->
+    <input type="text" id="search-input" placeholder="Search tasks..." class="search-bar">
+  
+    <!-- Botões de filtro -->
+    <div class="filter-buttons">
+      <button data-filter="all" class="filter-btn active">All</button>
+      <button data-filter="completed" class="filter-btn">Completed</button>
+      <button data-filter="incomplete" class="filter-btn">Incomplete</button>
+    </div>
+  
+    <!-- Lista de tarefas -->
+    <ul id="task-list"></ul>
+
+    <!-- Resumo das tarefas -->
+    <div id="summary-container">
+      <h2>Resumo das Tarefas</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Status</th>
+            <th>Quantidade</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Concluídas</td>
+            <td id="completed-count">0</td>
+          </tr>
+          <tr>
+            <td>Incompletas</td>
+            <td id="incomplete-count">0</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  
+  <script src="script.js"></script>
+</body>
+</html>
